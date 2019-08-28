@@ -77,3 +77,9 @@ const COUNTYTAXRATE = .011
 
 // Calculate and Display Results
 console.log(`Employee: ${firstName} ${lastName}`);
+
+var grossPay = netPay = hoursWorked * hourlyRate;
+console.log(`Gross Pay: ${grossPay}`);
+
+var fedTax = grossPay * FEDTAXRATE;
+console.log(`Federal Tax: ${fedTax}`);
