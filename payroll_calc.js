@@ -12,3 +12,52 @@
     Hourly Wage Rate: $15.50
     Medical Insurance Deduction: $55.00
 */
+
+// Pseudocode
+/*
+    -Welcome the User-
+    
+    -Variables and Constants-
+    Declare String firstName
+    Declare String lastName
+    
+    Declare Numeric hoursWorked
+    Declare Numeric hourlyRate
+    Declare Numeric insuranceDeduction
+    Declare Numeric grossPay
+    Declare Numeric netPay
+    Declare Numeric fedTax
+    Declare Numeric stateTax
+    Declare Numeric countyTax
+    Declare Numeric deductions
+    
+    Declare Constant FEDTAXRATE
+    Declare Constant STATETAXRATE
+    Declare Constant COUNTYTAXRATE
+    
+    -Calculate and Display Results-
+    Display `Employee: ${firstName} ${lastName}`
+    
+    Multiply hoursWorked by hourlyRate and assign to grossPay and netPay
+    Display `Gross Pay: \$${grossPay}`
+    
+    Multiply grossPay by FEDTAXRATE, Subtract from grossPay, and assign to fedTax
+    Display `Federal Tax: \$${fedTax}`
+    
+    Multiply grossPay by STATETAXRATE, subtract from grossPay, and assign to stateTax
+    Display `State Tax: \$${stateTax}`
+    
+    Multiply grossPay by COUNTYTAXRATE, Subtract from grossPay, and assign to countyTax
+    Display `County Tax: \$${countyTax}`
+    
+    Display `Medical Insurance Deduction: ${insuranceDeduction}`
+    
+    Add fedTax, stateTax, countyTax, and insuranceDeduction and assign to deductions
+    Display `Total Deductions: ${deductions}`
+    
+    Subtract deductions from netPay
+    Display `Net Pay: ${netPay}`
+    
+    -Thank the User-
+*/
+
