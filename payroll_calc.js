@@ -83,3 +83,10 @@ console.log(`Gross Pay: ${grossPay}`);
 
 var fedTax = grossPay * FEDTAXRATE;
 console.log(`Federal Tax: ${fedTax}`);
+
+var stateTax = grosspay * STATETAXRATE;
+console.log(`State Tax: ${stateTax}`);
+
+var countyTax = grossPay * COUNTYTAXRATE;
+console.log(`County Tax: ${countyTax}`);
+
