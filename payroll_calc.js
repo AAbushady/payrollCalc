@@ -61,3 +61,19 @@
     -Thank the User-
 */
 
+// Welcome the User
+console.log(`Welcome to Payroll!`);
+
+// Variables and Constants
+var firstName = "Meredith";
+var lastName = "Fitch";
+var hoursWorked = 40;
+var hourlyRate = 15.50;
+var insuranceDeduction = 55.00;
+
+const FEDTAXRATE = .15
+const STATETAXRATE = .034
+const COUNTYTAXRATE = .011
+
+// Calculate and Display Results
+console.log(`Employee: ${firstName} ${lastName}`);
