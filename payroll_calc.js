@@ -79,21 +79,21 @@ const COUNTYTAXRATE = .011
 console.log(`Employee: ${firstName} ${lastName}`);
 
 var grossPay = netPay = hoursWorked * hourlyRate;
-console.log(`Gross Pay: ${grossPay.toFixed(2)}`);
+console.log(`Gross Pay: \$${grossPay.toFixed(2)}`);
 
 var fedTax = grossPay * FEDTAXRATE;
-console.log(`Federal Tax: ${fedTax.toFixed(2)}`);
+console.log(`Federal Tax: \$${fedTax.toFixed(2)}`);
 
 var stateTax = grossPay * STATETAXRATE;
-console.log(`State Tax: ${stateTax.toFixed(2)}`);
+console.log(`State Tax: \$${stateTax.toFixed(2)}`);
 
 var countyTax = grossPay * COUNTYTAXRATE;
-console.log(`County Tax: ${countyTax.toFixed(2)}`);
+console.log(`County Tax: \$${countyTax.toFixed(2)}`);
 
-console.log(`Medical Insurance Deductions: ${insuranceDeduction.toFixed(2)}`);
+console.log(`Medical Insurance Deductions: \$${insuranceDeduction.toFixed(2)}`);
 
 var deductions = fedTax + stateTax + countyTax + insuranceDeduction;
-console.log(`Total Deductions: ${deductions.toFixed(2)}`);
+console.log(`Total Deductions: \$${deductions.toFixed(2)}`);
 
 netPay -= deductions;
-console.log(`Net Pay: ${netPay.toFixed(2)}`);
+console.log(`Net Pay: \$${netPay.toFixed(2)}`);
