@@ -90,3 +90,8 @@ console.log(`State Tax: ${stateTax}`);
 var countyTax = grossPay * COUNTYTAXRATE;
 console.log(`County Tax: ${countyTax}`);
 
+console.log(`Medical Insurance Deductions: ${insuranceDeduction}`);
+
+var deductions = fedTax + stateTax + countyTax + insuranceDeduction;
+console.log(`Total Deductions: ${deductions}`);
+
