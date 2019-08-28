@@ -84,7 +84,7 @@ console.log(`Gross Pay: ${grossPay}`);
 var fedTax = grossPay * FEDTAXRATE;
 console.log(`Federal Tax: ${fedTax}`);
 
-var stateTax = grosspay * STATETAXRATE;
+var stateTax = grossPay * STATETAXRATE;
 console.log(`State Tax: ${stateTax}`);
 
 var countyTax = grossPay * COUNTYTAXRATE;
@@ -95,3 +95,5 @@ console.log(`Medical Insurance Deductions: ${insuranceDeduction}`);
 var deductions = fedTax + stateTax + countyTax + insuranceDeduction;
 console.log(`Total Deductions: ${deductions}`);
 
+netPay -= deductions;
+console.log(`Net Pay: ${netPay}`);
