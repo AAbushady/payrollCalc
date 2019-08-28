@@ -97,3 +97,6 @@ console.log(`Total Deductions: \$${deductions.toFixed(2)}`);
 
 netPay -= deductions;
 console.log(`Net Pay: \$${netPay.toFixed(2)}`);
+
+// Thank the User
+console.log("Thank You For Using Payroll!");
