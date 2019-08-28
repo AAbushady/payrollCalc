@@ -41,13 +41,13 @@
     Multiply hoursWorked by hourlyRate and assign to grossPay and netPay
     Display `Gross Pay: \$${grossPay}`
     
-    Multiply grossPay by FEDTAXRATE, Subtract from grossPay, and assign to fedTax
+    Multiply grossPay by FEDTAXRATE, and assign to fedTax
     Display `Federal Tax: \$${fedTax}`
     
-    Multiply grossPay by STATETAXRATE, subtract from grossPay, and assign to stateTax
+    Multiply grossPay by STATETAXRATE, and assign to stateTax
     Display `State Tax: \$${stateTax}`
     
-    Multiply grossPay by COUNTYTAXRATE, Subtract from grossPay, and assign to countyTax
+    Multiply grossPay by COUNTYTAXRATE, and assign to countyTax
     Display `County Tax: \$${countyTax}`
     
     Display `Medical Insurance Deduction: ${insuranceDeduction}`
