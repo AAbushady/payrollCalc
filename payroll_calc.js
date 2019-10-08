@@ -1,102 +1,47 @@
-/*
-    You have been asked to create a program called "payroll_calc.js", that computes and displays
-    paycheck information for employees. The program should compute the gross pay. After it has computed
-    the gross pay, it should deduct three types of income tax witholding - federal (at a rate of 15%),
-    state (at 3.4%), and county (at 1.1%) - as well as the amount of the employee's medical insurace deduction.
-    Finally, the program should total the deductions and calculate the net pay, and display ALL this
-    information, including the employe's name. Use the following values:
-    
-    First Name: Meredith
-    Last Name: Fitch
-    Hours Worked: 40
-    Hourly Wage Rate: $15.50
-    Medical Insurance Deduction: $55.00
-*/
+/*global console*/
+/*jshint esversion:6*/
 
-// Pseudocode
-/*
-    -Welcome the User-
-    
-    -Variables and Constants-
-    Declare String firstName
-    Declare String lastName
-    
-    Declare Numeric hoursWorked
-    Declare Numeric hourlyRate
-    Declare Numeric insuranceDeduction
-    Declare Numeric grossPay
-    Declare Numeric netPay
-    Declare Numeric fedTax
-    Declare Numeric stateTax
-    Declare Numeric countyTax
-    Declare Numeric deductions
-    
-    Declare Constant FEDTAXRATE
-    Declare Constant STATETAXRATE
-    Declare Constant COUNTYTAXRATE
-    
-    -Calculate and Display Results-
-    Display `Employee: ${firstName} ${lastName}`
-    
-    Multiply hoursWorked by hourlyRate and assign to grossPay and netPay
-    Display `Gross Pay: \$${grossPay}`
-    
-    Multiply grossPay by FEDTAXRATE, and assign to fedTax
-    Display `Federal Tax: \$${fedTax}`
-    
-    Multiply grossPay by STATETAXRATE, and assign to stateTax
-    Display `State Tax: \$${stateTax}`
-    
-    Multiply grossPay by COUNTYTAXRATE, and assign to countyTax
-    Display `County Tax: \$${countyTax}`
-    
-    Display `Medical Insurance Deduction: ${insuranceDeduction}`
-    
-    Add fedTax, stateTax, countyTax, and insuranceDeduction and assign to deductions
-    Display `Total Deductions: ${deductions}`
-    
-    Subtract deductions from netPay
-    Display `Net Pay: ${netPay}`
-    
-    -Thank the User-
-*/
+(function () {
+    'use strict';
 
-// Welcome the User
-console.log(`Welcome to Payroll!`);
+    // Welcome the User
+    console.log(`Welcome to Payroll!\n`);
 
-// Variables and Constants
-var firstName = "Meredith";
-var lastName = "Fitch";
-var hoursWorked = 40;
-var hourlyRate = 15.50;
-var insuranceDeduction = 55.00;
+    // Variables and Constants
+    let firstName = "Meredith";
+    let lastName = "Fitch";
+    let hoursWorked = 40;
+    let hourlyRate = 15.50;
+    let insuranceDeduction = 55.00;
 
-const FEDTAXRATE = .15
-const STATETAXRATE = .034
-const COUNTYTAXRATE = .011
+    const FEDTAXRATE = 0.15;
+    const STATETAXRATE = 0.034;
+    const COUNTYTAXRATE = 0.011;
 
-// Calculate and Display Results
-console.log(`Employee: ${firstName} ${lastName}`);
+    // Calculate and Display Results
+    console.log(`Employee: ${firstName} ${lastName}`);
 
-var grossPay = netPay = hoursWorked * hourlyRate;
-console.log(`Gross Pay: \$${grossPay.toFixed(2)}`);
+    let grossPay = hoursWorked * hourlyRate;
+    console.log(`Gross Pay: \$${grossPay.toFixed(2)}`);
 
-var fedTax = grossPay * FEDTAXRATE;
-console.log(`Federal Tax: \$${fedTax.toFixed(2)}`);
+    let fedTax = grossPay * FEDTAXRATE;
+    console.log(`Federal Tax: \$${fedTax.toFixed(2)}`);
 
-var stateTax = grossPay * STATETAXRATE;
-console.log(`State Tax: \$${stateTax.toFixed(2)}`);
+    let stateTax = grossPay * STATETAXRATE;
+    console.log(`State Tax: \$${stateTax.toFixed(2)}`);
 
-var countyTax = grossPay * COUNTYTAXRATE;
-console.log(`County Tax: \$${countyTax.toFixed(2)}`);
+    let countyTax = grossPay * COUNTYTAXRATE;
+    console.log(`County Tax: \$${countyTax.toFixed(2)}`);
 
-console.log(`Medical Insurance Deductions: \$${insuranceDeduction.toFixed(2)}`);
+    console.log(`Medical Insurance Deductions: \$${insuranceDeduction.toFixed(2)}`);
 
-var deductions = fedTax + stateTax + countyTax + insuranceDeduction;
-console.log(`Total Deductions: \$${deductions.toFixed(2)}`);
+    let deductions = fedTax + stateTax + countyTax + insuranceDeduction;
+    console.log(`Total Deductions: \$${deductions.toFixed(2)}`);
 
-netPay -= deductions;
-console.log(`Net Pay: \$${netPay.toFixed(2)}`);
+    let netPay = hoursWorked * hourlyRate;
+    netPay -= deductions;
+    console.log(`Net Pay: \$${netPay.toFixed(2)}`);
 
-// Thank the User
-console.log("Thank You For Using Payroll!");
+    // Thank the User
+    console.log("\nThank You For Using Payroll!");
+})();
